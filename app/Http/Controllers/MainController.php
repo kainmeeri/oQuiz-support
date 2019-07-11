@@ -27,12 +27,9 @@ class MainController extends Controller
 
     public function homeAction(Request $request)
     {
-
-       
+ 
         $quizzeList = Quizzes::all();
         // dump($quizzeList[1]->appUser);
-
-        
         
         return view('home', [
             'quizze' => $quizzeList

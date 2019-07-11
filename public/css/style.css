@@ -1,99 +1,70 @@
-html {
-    background-color: pink;
+.header_pres {
+    margin: 20px auto;
+    width: 1500px;
 }
 
-body {
-    font-family: Monospace, sans-serif;
-    background-color: pink;
+.header_title {
+    text-align: center;
+    font-size: 1.5em;
+}
+.header_text {
+    margin: 5px;
 }
 
-h1 {
-    font-size: 3em;
-    margin: 0.325rem 0 1rem;
-    color: blue;
+#main_div {
+   display: flex;
+   flex-wrap: wrap;
 }
 
-h2 {
-    font-size: 2.4em;
-    margin: 0.325rem 0 0.625rem;
-    color: darkblue;
-}
-
-h3 {
-    font-size: 2em;
-    margin: 0.325rem 0 0.75rem;
-    color: darkcyan;
-}
-
-p {
-    margin: 0.625rem 0;
-}
-
-a {
-    color: yellowgreen;
-}
-
-.container {
-    width: 900px;
-    margin: auto;
-    background-color: white;
-    padding: 1.25rem;
-    margin-top: 0.625rem;
-    border: 1px solid palevioletred;
+.div_flex {
+    width: 300px;
+    height: 300px;
+    border: 2px solid lightgrey;
+    margin: 80px;
+    border-radius: 5px;
+    background-color: whitesmoke;
 }
 
 .row {
-    display: flex;
-}
-
-.row > .col {
-    flex: 1;
-}
-
-.question {
-    margin: 0.625rem 1.25rem;
-}
-
-.question__question {
-    margin: 0.625rem 0;
-    font-weight: bold;
-}
-
-.level {
-    font-size: 0.8em;
-}
-
-.level--beginner {
-    color: darkgreen;
-}
-
-.level--medium {
-    color: darkgoldenrod;
-}
-
-.level--expert {
-    color: darkred;
-}
-
-.question__info {
-    font-style: italic;
-    font-size: 0.8em;
-}
-
-.question__choices {
-    margin: 0.625rem 0;
-}
-
-.btn {
-    display: block;
-    width: 100%;
-    margin: 0.625rem 0;
+    margin: auto;
+    width: 200px;
     text-align: center;
-    color: red;
-    border: 2px solid red;
-    background-color: yellow;
-    font-size: 1.4em;
-    font-weight: bold;
-    padding: 0.325rem 0;
-    cursor: pointer;
+    margin-top: 80px;
 }
+
+.col {
+    transition: font-size 1s;
+}
+
+.col:hover {
+    font-size: 1.04em;
+}
+
+
+.signin {
+    width: 350px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 2s;
+}
+.signin:hover {
+    background-color: lightgray;
+}
+
+
+.signup {
+    width: 350px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 2s;
+}
+.signup:hover {
+    background-color: lightgray;
+}
+
+a {
+    color: #4a4a4a;
+}
+
