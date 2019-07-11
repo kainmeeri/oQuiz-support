@@ -22,7 +22,7 @@
 
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="<?= route('home') ?>">
                         <h1>O'Quiz</h1>
                         </a>
                     </li>

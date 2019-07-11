@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 
-class MainController extends Controller
+class QuizController extends Controller
 {  
     /**
      * Create a new controller instance.
@@ -25,19 +25,9 @@ class MainController extends Controller
         //
     }
 
-    public function homeAction(Request $request)
+    public function quizAction(Request $request)
     {
-
-       
-        $quizzeList = Quizzes::all();
-        // dump($quizzeList[1]->appUser);
-
-        
-        
-        return view('home', [
-            'quizze' => $quizzeList
-        ]);
-
+        return view('quiz');
     }
 }
 

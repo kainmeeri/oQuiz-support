@@ -1,46 +1,17 @@
 <?php
 include 'layouts/header.php';
 ?>
-    <div class="row">
-
-        <div class="col">
-            <h3>Titre 1</h3>
-            <h5>Sous titre</h5>
-            <p>by author name</p>
-        </div>
-
-        <div class="col">
-            <h3>Titre 2</h3>
-            <h5>Sous titre</h5>
-            <p>by author name</p>
-        </div>
-
-        <div class="col">
-            <h3>Titre 3</h3>
-            <h5>Sous titre</h5>
-            <p>by author name</p>
-        </div>
-    </div>
-
+    <?php foreach($quizze as $quizzadd) : ?>
     <div class="row">
         <div class="col">
-            <h3>Titre 4</h3>
-            <h5>Sous titre</h5>
-            <p>by author name</p>
-        </div>
-
-        <div class="col">
-            <h3>Titre 5</h3>
-            <h5>Sous titre</h5>
-            <p>by author name</p>
-        </div>
-
-        <div class="col">
-            <h3>Titre 6</h3>
-            <h5>Sous titre</h5>
-            <p>by author name</p>
+            <h3><?= $quizzadd->title ?></h3>
+            <h5><?= $quizzadd->description ?></h5>
+            <p><?= $quizzadd->appusers->firstname ?></p>
         </div>
     </div>
+    <?php endforeach; ?>
+
+
 <?php
 include 'layouts/footer.php';
 ?>

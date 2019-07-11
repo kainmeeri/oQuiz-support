@@ -25,3 +25,9 @@ $router->get('/signin', [
     'as' => 'signin',
     'uses' => 'UserController@signinAction'
 ]);
+
+
+$router->get('/quiz/{id}', [
+    'as' => 'quiz',
+    'uses' => 'QuizController@quizAction'
+]);
