@@ -11,6 +11,17 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/', [
+    'as' => 'home',
+    'uses' => 'MainController@homeAction'
+]);
+
+$router->get('/signup', [
+    'as' => 'signup',
+    'uses' => 'UserController@signupAction'
+]);
+
+$router->get('/signin', [
+    'as' => 'signin',
+    'uses' => 'UserController@signinAction'
+]);
