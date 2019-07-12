@@ -31,3 +31,9 @@ $router->get('/quiz/{id}', [
     'as' => 'quiz',
     'uses' => 'QuizController@quizAction'
 ]);
+
+// $router->get('quiz/{id}', function ($id) {
+//     return 'Quiz '.$id;
+//     });
+
+// route('quiz', ['id' => 34])

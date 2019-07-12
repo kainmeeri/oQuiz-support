@@ -27,18 +27,19 @@
 
 .div_flex {
     width: 300px;
-    height: 300px;
+    height: 200px;
     border: 2px solid lightgrey;
-    margin: 80px;
+    margin: 50px;
     border-radius: 5px;
     background-color: whitesmoke;
+    margin-bottom: 100px;
 }
 
 .row {
     margin: auto;
     width: 200px;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .col {
@@ -76,6 +77,46 @@
 a {
     color: #4a4a4a;
 }
+
+#div_flex--quiz {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+#div_text--quiz {
+  text-align: center;
+  margin-top: 100px;
+    
+}
+
+.question {
+    border: 2px solid lightgray;
+    padding: 20px;
+    margin: 30px;
+    width: 500px;
+    height: 240px;
+    border-radius: 4px;
+}
+
+.btn_div {
+    margin: 30px 48.3% 0;
+    width: 50px;
+    height: 30px;
+}
+.btn {
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 10px;
+    color: #4a4a4a;
+
+}
+
+
+
 
 .footer {
     position: fixed;

@@ -5,7 +5,15 @@ include 'layouts/header.php';
     <form action="">
         <div class="field">
             <div class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="Username" >
+                <input class="input" type="text" placeholder="Firstname" >
+                <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+                </span>
+            </div>
+        </div>
+        <div class="field">
+            <div class="control has-icons-left has-icons-right">
+                <input class="input" type="text" placeholder="Lastname" >
                 <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
                 </span>

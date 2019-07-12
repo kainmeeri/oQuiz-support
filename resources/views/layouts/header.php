@@ -5,13 +5,13 @@
         <meta charset="utf-8">
 
         <!-- Reset CSS -->
-        <link href="./css/reset.css"  rel="stylesheet">
+        <link href="<?= url('css/reset.css') ?>s"  rel="stylesheet">
 
         <!-- Bulma -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
 
         <!-- Really beautiful CSS -->
-        <link href="./css/style.css"  rel="stylesheet">
+        <link href="<?= url('css/style.css') ?>"  rel="stylesheet">
 
         <title>O'Quiz</title>
     </head>
@@ -37,15 +37,4 @@
                     </div>
                 </div>
             </nav>
-            <div class="header_pres">
-                <h2 class="header_title"> Bienvenue sur O'Quiz </h2>
-                <p class="header_text">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
-                    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
-                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
-                    et accusam et justo duo dolores et ea rebum. 
-                </p>
-            </div>
+            

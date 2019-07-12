@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Quizzes extends Model 
+class Quiz extends Model 
 {
     // SQLSTATE[42S02]: Base table or view not found: 1146 Table 'videogame-r.videogames' doesn't exist (SQL: select * from `videogames`)
     // donc on doit spécifier le nom de la table
@@ -29,5 +29,15 @@ class Quizzes extends Model
     public function appUsers()
     {
         return $this->belongsTo('App\Models\AppUsers');
+    }
+
+    public function questions()
+    {
+        return $this->hasOne('App\Models\Question');
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany('App\Models\Tag');
     }
 }
