@@ -8,6 +8,7 @@ include 'layouts/header.php';
         </p>
     </div>
     <div id="main_div">
+        <!-- je boucle avec un foreach pour recuperer es info de mon tableau $quizzes, puis j'appel les informations dont jai besoin -->
         <?php foreach($quizzes as $quiz) : ?>
         <div class="div_flex">
             <a class="a" href="<?= 'quiz/'.$quiz->id ?>">

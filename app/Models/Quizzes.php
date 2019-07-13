@@ -24,8 +24,8 @@ class Quizzes extends Model
      */
     public $timestamps = false;
 
-
-
+    
+    // relation avec mon model Quizzes
     public function appUsers()
     {
         return $this->belongsTo('App\Models\AppUsers');

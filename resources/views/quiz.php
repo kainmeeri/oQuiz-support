@@ -5,6 +5,7 @@ include 'layouts/header.php';
     <div id="div_text--quiz">
         <div class="header__quiz">
             <div class="header__quiz--container">
+                <!-- ici j'appel les info dont j'ai besoin pour ma page quiz -->
                 <h2 class="title is-3"> <?= $quizzes->title ?></h2>                 
             </div>
             <div class="header__quiz--container">
@@ -18,6 +19,7 @@ include 'layouts/header.php';
             </div>
         </div>
         <div>
+            <!-- petit fonction (pas très factoriser) pour changer le background-color selon le tag afficher -->
             <?php if ($quizzes !== null) {
                 foreach ($quizzes->tags as $tag) {
                     if ($tag->name === 'Cinéma') { 
@@ -57,10 +59,12 @@ include 'layouts/header.php';
 
     <form action="" method="">
     <div class="quiz_container">
+        <!-- je boucle $questiosn (tableau) pour afficher les question -->
         <?php foreach($questions as $question) : ?>
             <div id="div_flex--quiz">
                 <div>
                     <div class="div_question col question">
+                        <!-- petit fonction (by Lucie Brochet) pour changer la color selon la difficulter -->
                         <?php if ($question->levels->name === 'Débutant'){
                                 $color= 'green';
                             }
@@ -70,8 +74,10 @@ include 'layouts/header.php';
                                 $color="red";
                             }
                         ?>
+                        <!-- j'affiche la difficulter d'une question -->
                         <span class="level level--beginner" style=<?= '"color:'.$color.'";'?>><?= $question->levels->name ?></span>
                         <div class="question__question">
+                            <!-- j'affiche mes questions -->
                             <?= $question->question ?>
                         </div>
                         
@@ -90,7 +96,8 @@ include 'layouts/header.php';
                             </div>
                         </div>
                     </div>
-                    <div class="question__info">         
+                    <div class="question__info">      
+                        <!-- liens wiki pour chaque questions     -->
                         <a href="https://fr.wikipedia.org/wiki/<?= $question->wiki ?>">Besoin d'aide ?</a>
                     </div>
                 </div>

@@ -31,10 +31,11 @@ class QuizController extends Controller
 
     public function quizAction(Request $request, $id)
     {
-        
+        // je récup les questions et je les rend aléatoire
         $questionsList = Questions::where('quizzes_id', $id)->get()->shuffle();
         // dump($questionsList);
 
+        // avec count() je recupère le nombre de questions par quiz 
         $nbQuestion = Questions::where('quizzes_id', $id)->count();
         // dump($nbQuestion);
         
