@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model 
+class Questions extends Model 
 {
     // SQLSTATE[42S02]: Base table or view not found: 1146 Table 'videogame-r.videogames' doesn't exist (SQL: select * from `videogames`)
     // donc on doit spécifier le nom de la table
@@ -13,7 +13,7 @@ class Tag extends Model
      *
      * @var string
      */
-    protected $table = 'tags';
+    protected $table = 'questions';
     
     // Erreur à l'insertion car updated_at & created_at n'existent pas
     // => Dire à Eloquent de ne pas ajouter automatiquement ces champs
@@ -24,5 +24,8 @@ class Tag extends Model
      */
     public $timestamps = false;
 
-    
+    public function levels()
+    {
+        return $this->belongsTo('App\Models\Levels');
+    }
 }

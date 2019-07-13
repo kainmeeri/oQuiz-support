@@ -3,6 +3,7 @@
     top: 0;
     right: 0;
     left: 0;
+    border-radius: 0 0 10px 10px ;
 }
 
 
@@ -13,10 +14,12 @@
 
 .header_title {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2.5em;
 }
 .header_text {
     margin: 5px;
+    text-align: center;
+    font-size: 1.2em;
 }
 
 #main_div {
@@ -50,10 +53,15 @@
     font-size: 1.04em;
 }
 
+.nav_title {
+    font-weight: bold;
+    color: white;
+}
+
 
 .signin {
     width: 350px;
-    margin: 100px auto;
+    margin: 200px auto;
     padding: 20px;
     border-radius: 5px;
     transition: background-color 2s;
@@ -65,7 +73,7 @@
 
 .signup {
     width: 350px;
-    margin: 100px auto;
+    margin: 200px auto;
     padding: 20px;
     border-radius: 5px;
     transition: background-color 2s;
@@ -74,35 +82,68 @@
     background-color: lightgray;
 }
 
+.control.has-icons-left .input, .control.has-icons-left .select select {
+    padding-left: 7px;
+}
+
 a {
     color: #4a4a4a;
+}
+
+.header__quiz{
+    padding: 10px;
+}
+.header__quiz--container{
+    padding: 3px;
+}
+
+.tag__color {
+    width: 110px;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.quiz_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #div_flex--quiz {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 100px;
-    margin-top: 20px;
+    margin: 50px 50px;
 }
 
 #div_text--quiz {
   text-align: center;
   margin-top: 100px;
-    
 }
 
 .question {
     border: 2px solid lightgray;
     padding: 20px;
-    margin: 30px;
+    margin: 5px 30px;
     width: 500px;
     height: 240px;
     border-radius: 4px;
 }
 
+.question__info {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.question__choices {
+    margin-top: 20px;
+}
+
 .btn_div {
-    margin: 30px 48.3% 0;
+    margin: 30px 48.3% 200px;
     width: 50px;
     height: 30px;
 }
@@ -112,11 +153,7 @@ a {
     border-radius: 4px;
     padding: 10px;
     color: #4a4a4a;
-
 }
-
-
-
 
 .footer {
     position: fixed;
@@ -124,7 +161,7 @@ a {
     right: 0;
     left: 0;
     background-color: lightgrey;
-    padding: 20px;
+    padding: 15px;
     color: #4a4a4a;
 }
 

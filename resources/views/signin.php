@@ -5,7 +5,7 @@ include 'layouts/header.php';
     <form action="">
         <div class="field">
             <p class="control has-icons-left has-icons-right">
-                <input class="input" type="email" placeholder="Email">
+                <input class="input" type="email" placeholder="Adresse e-mail">
                 <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
                 </span>
@@ -16,7 +16,7 @@ include 'layouts/header.php';
         </div>
         <div class="field">
             <p class="control has-icons-left">
-                <input class="input" type="password" placeholder="Password">
+                <input class="input" type="password" placeholder="Mot de passe">
                 <span class="icon is-small is-left">
                 <i class="fas fa-lock"></i>
                 </span>
@@ -25,7 +25,7 @@ include 'layouts/header.php';
         <div class="field">
             <p class="control">
                 <button class="button is-success">
-                Login
+                Valide
                 </button>
             </p>
         </div>

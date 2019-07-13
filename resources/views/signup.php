@@ -5,7 +5,7 @@ include 'layouts/header.php';
     <form action="">
         <div class="field">
             <div class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="Firstname" >
+                <input class="input" type="text" placeholder="Prénom" >
                 <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
                 </span>
@@ -13,7 +13,7 @@ include 'layouts/header.php';
         </div>
         <div class="field">
             <div class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="Lastname" >
+                <input class="input" type="text" placeholder="Nom" >
                 <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
                 </span>
@@ -21,7 +21,7 @@ include 'layouts/header.php';
         </div>
         <div class="field">
             <p class="control has-icons-left has-icons-right">
-                <input class="input" type="email" placeholder="Email">
+                <input class="input" type="email" placeholder="Adresse e-mail">
                 <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
                 </span>
@@ -32,7 +32,7 @@ include 'layouts/header.php';
         </div>
         <div class="field">
             <p class="control has-icons-left">
-                <input class="input" type="password" placeholder="Password">
+                <input class="input" type="password" placeholder="Mot de passe">
                 <span class="icon is-small is-left">
                 <i class="fas fa-lock"></i>
                 </span>
@@ -41,8 +41,8 @@ include 'layouts/header.php';
         <div class="field">
             <div class="control">
                 <label class="checkbox">
-                <input type="checkbox">
-                I agree to the <a href="#">terms and conditions</a>
+                    <input type="checkbox">            
+                    J'accepte les <a href="#"> conditions d'utilisation</a>
                 </label>
             </div>
         </div>

@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 // On peut appeler les modêles en utilisant le namespace complet
 // Pour savuer un peu de nos yeux, on peut aussi ajout un use
 use App\Models\AppUsers;
-use App\Models\Level;
-use App\Models\Question;
-use App\Models\Quiz;
-use App\Models\Tag;
+use App\Models\Levels;
+use App\Models\Questions;
+use App\Models\Quizzes;
+use App\Models\Tags;
 
 
 use Illuminate\Http\Request;
@@ -31,7 +31,7 @@ class MainController extends Controller
     public function homeAction(Request $request)
     {
         // shuffle() pour rendre les quiz de la page home aléatoire à chaque refresh
-        $quizzesList = Quiz::all();
+        $quizzesList = Quizzes::all()->shuffle();
         // dump($quizzeList[1]->appUser);
         
         return view('home', [
