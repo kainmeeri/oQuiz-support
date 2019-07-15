@@ -25,19 +25,28 @@ class Quizzes extends Model
     public $timestamps = false;
 
     
-    // relation avec mon model Quizzes
-    public function appUsers()
+      /**
+     * Eloquent ira chercher dans la table quizzes un champ app_users_id.
+     * C'est-à-dire qu'il va prendre le nom de cette méthode et lui ajouter _id.
+     * Pour se plier à la base de données existante, on doit donc appeler cette méthode app_users
+     * On aurait pu nommé cette méthode comme on veut au lieu de subir le foncitonnement par défaut d'Eloquent, on l'a d'ailleurs fait pour les Level dans les Question. Cette solution aurait été plus propre.
+     */
+    public function app_users()
     {
-        return $this->belongsTo('App\Models\AppUsers');
+        return $this->belongsTo('App\User');
     }
 
+    /**
+     * On ajoute la relation entre Quiz et Question.
+     * On crée ici une méthode questions qui va créer une propriété du même nom et dans laquelle on aura une Collection d'objet de la classe Question
+     */
     public function questions()
     {
-        return $this->hasOne('App\Models\Questions');
+        return $this->hasMany('App\Models\Questions', 'quizzes_id');
     }
 
     public function tags()
     {
-        return $this->belongsToMany('App\Models\Tags', 'quizzes_has_tags');
+        return $this->belongsToMany('App\Models\Tags', 'quizzes_has_tags', 'quizzes_id', 'tags_id');
     }
 }

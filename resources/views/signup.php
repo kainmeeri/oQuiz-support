@@ -2,10 +2,10 @@
 include 'layouts/header.php';
 ?>
 <div class="signup">
-    <form action="">
+    <form action="<?= route('signupPost') ?>" method="post">
         <div class="field">
             <div class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="Prénom" >
+                <input class="input" type="text" name="firstname" placeholder="Prénom" >
                 <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
                 </span>
@@ -13,7 +13,7 @@ include 'layouts/header.php';
         </div>
         <div class="field">
             <div class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="Nom" >
+                <input class="input" type="text" name="lastname" placeholder="Nom" >
                 <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
                 </span>
@@ -21,7 +21,7 @@ include 'layouts/header.php';
         </div>
         <div class="field">
             <p class="control has-icons-left has-icons-right">
-                <input class="input" type="email" placeholder="Adresse e-mail">
+                <input class="input" type="email" name="email" placeholder="Adresse e-mail">
                 <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
                 </span>
@@ -32,7 +32,7 @@ include 'layouts/header.php';
         </div>
         <div class="field">
             <p class="control has-icons-left">
-                <input class="input" type="password" placeholder="Mot de passe">
+                <input class="input" type="password" name="password" placeholder="Mot de passe">
                 <span class="icon is-small is-left">
                 <i class="fas fa-lock"></i>
                 </span>

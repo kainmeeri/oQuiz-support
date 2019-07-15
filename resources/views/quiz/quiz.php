@@ -1,57 +1,31 @@
 <?php
-include 'layouts/header.php';
+include __DIR__.'/../layouts/header.php';
 ?> 
 
     <div id="div_text--quiz">
         <div class="header__quiz">
             <div class="header__quiz--container">
-                <!-- ici j'appel les info dont j'ai besoin pour ma page quiz -->
+                <!-- ici j'appel les info's dont j'ai besoin pour ma page quiz -->
                 <h2 class="title is-3"> <?= $quizzes->title ?></h2>                 
             </div>
             <div class="header__quiz--container">
                 <h4 class="subtitle is-4"><?= $quizzes->description ?></h4>
             </div>
             <div class="header__quiz--container">
-                <p class="subtitle is-5"><?= $quizzes->appusers->firstname.' '.$quizzes->appusers->lastname ?> </p>
+                <p class="subtitle is-5"><?= $quizzes->app_users->firstname.' '.$quizzes->app_users->lastname ?> </p>
             </div>
             <div class="header__quiz--container">
-                <p><?= $nbQuestions?> questions</p>
+             <!-- avec count() je recupère le nombre de questions par quiz  -->
+                <p><?= count($quizzes->questions) ?> questions</p>
             </div>
         </div>
         <div>
-            <!-- petit fonction (pas très factoriser) pour changer le background-color selon le tag afficher -->
+            <!-- petit condition (pas très factoriser) pour changer le background-color selon le tag afficher -->
             <?php if ($quizzes !== null) {
-                foreach ($quizzes->tags as $tag) {
-                    if ($tag->name === 'Cinéma') { 
-                        $bColor= 'blue';
-                    echo '<div class="tag__color" style="background-color:'.$bColor.';"><p>'.  $tag->name .'</p></div>';
-                    } elseif ($tag->name === 'Technologie') {
-                        $bColor= 'green';
-                        echo '<div class="tag__color" style="background-color:'.$bColor.';"><p>'.  $tag->name .'</p></div>';
-                    } elseif ($tag->name === 'Gastronomie') {
-                        $bColor= 'brown';
-                        echo '<div class="tag__color" style="background-color:'.$bColor.';"><p>'.  $tag->name .'</p></div>';
-                    }elseif ($tag->name === 'Littérature') {
-                        $bColor= 'grey';
-                        echo '<div class="tag__color" style="background-color:'.$bColor.';"><p>'.  $tag->name .'</p></div>';
-                    }elseif ($tag->name === 'Histoire') {
-                        $bColor= 'purple';
-                        echo '<div class="tag__color" style="background-color:'.$bColor.';"><p>'.  $tag->name .'</p></div>';
-                    }elseif ($tag->name === 'Animaux') {
-                        $bColor= 'pink';
-                        echo '<div class="tag__color" style="background-color:'.$bColor.';"><p>'.  $tag->name .'</p></div>';
-                    }elseif ($tag->name === 'Nature') {
-                        $bColor= 'lightblue';
-                        echo '<div class="tag__color" style="background-color:'.$bColor.';"><p>'.  $tag->name .'</p></div>';
-                    }elseif ($tag->name === 'Astronomie') {
-                        $bColor= 'coral';
-                        echo '<div class="tag__color" style="background-color:'.$bColor.';"><p>'.  $tag->name .'</p></div>';
-                    } elseif ($tag->name === 'Géographie') {
-                        $bColor= 'crimson';
-                        echo '<div class="tag__color" style="background-color:'.$bColor.';"><p>'.  $tag->name .'</p></div>';
-                    }
-                  }
+                foreach ($quizzes->tags as $tag) { 
+                    echo '<div class="tag__color" style="background-color:'.$tag->color.';"><p>'.  $tag->name .'</p></div>'; 
                 } 
+            }
             ?>
         </div>
        
@@ -59,12 +33,12 @@ include 'layouts/header.php';
 
     <form action="" method="">
     <div class="quiz_container">
-        <!-- je boucle $questiosn (tableau) pour afficher les question -->
-        <?php foreach($questions as $question) : ?>
+        <!-- je boucle $quizzes->questions (tableau) pour afficher les questions -->
+        <?php foreach($quizzes->questions as $question) : ?>
             <div id="div_flex--quiz">
                 <div>
                     <div class="div_question col question">
-                        <!-- petit fonction (by Lucie Brochet) pour changer la color selon la difficulter -->
+                        <!-- petite conditions (by Lucie Brochet) pour changer la color selon la difficulter -->
                         <?php if ($question->levels->name === 'Débutant'){
                                 $color= 'green';
                             }
@@ -110,5 +84,5 @@ include 'layouts/header.php';
     </form>
    
 <?php
-include 'layouts/footer.php';
-?>
+include __DIR__.'/../layouts/footer.php';
+?> 

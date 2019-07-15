@@ -8,14 +8,13 @@ use App\Models\Levels;
 use App\Models\Questions;
 use App\Models\Quizzes;
 use App\Models\Tags;
-
-
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 
-class MainController extends Controller
+class TagController extends Controller
 {  
     /**
      * Create a new controller instance.
@@ -27,19 +26,26 @@ class MainController extends Controller
         //
     }
 
-    public function homeAction(Request $request)
-    {
-        // shuffle() pour rendre les quiz de la page home aléatoire à chaque refresh
-        $quizzesList = Quizzes::all()->shuffle();
-        // dump($quizzeList[1]->appUser);
-        
-        return view('home', [
-            'quizzes' => $quizzesList
-        ]);
+   public function tagsAction(Request $request) {
 
-    }
+        $tagsList = Tags::all()->shuffle();
+        // dump($tagsList);
+
+        return view('tag.tags', [
+            'tags' => $tagsList,
+        ]);
+   }
+
+    public function tagsQuizAction(Request $request, $id) {
+
+        $tagQuizzesList =  Tags::find($id);
+        //  dump($tagsQuizList->quizzes);
+      
+
+        return view('tag.tagQuizzes', [
+            'tagQuizzes' => $tagQuizzesList,
+        ]);
+   }
 }
 
 
-
-      

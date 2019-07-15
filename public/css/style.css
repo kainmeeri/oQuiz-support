@@ -22,6 +22,17 @@
     font-size: 1.2em;
 }
 
+.tags_title--home {
+    text-align: center;
+    width: 180px;
+    font-size: 1.3em;
+    background-color: lightblue;
+    margin: 10px auto ;
+    padding: 3px;
+    border-radius: 4px;
+}
+
+
 #main_div {
    display: flex;
    flex-wrap: wrap;
@@ -163,5 +174,29 @@ a {
     background-color: lightgrey;
     padding: 15px;
     color: #4a4a4a;
+}
+
+.div__tags--title {
+    margin: 150px 0 60px 0;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.div__tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div__tags--container {
+    padding: 7px;
+    margin: 5px;
+    border-radius: 4px;
+    color: white;
+    transition: font-size 0.5s;
+}
+.div__tags--container:hover {
+    font-size: 1.1em;
 }
 

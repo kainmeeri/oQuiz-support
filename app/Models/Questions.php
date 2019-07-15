@@ -26,6 +26,6 @@ class Questions extends Model
 
     public function levels()
     {
-        return $this->belongsTo('App\Models\Levels');
+        return $this->belongsTo('App\Models\Levels', 'levels_id');
     }
 }

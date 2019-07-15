@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 // On peut appeler les modêles en utilisant le namespace complet
 // Pour savuer un peu de nos yeux, on peut aussi ajout un use
-use App\Models\AppUsers;
 use App\Models\Levels;
 use App\Models\Questions;
 use App\Models\Quizzes;
@@ -29,24 +28,23 @@ class QuizController extends Controller
         //
     }
 
-    public function quizAction(Request $request, $id)
+    public function quizAction($id)
     {
-        // je récup les questions et je les rend aléatoire
-        $questionsList = Questions::where('quizzes_id', $id)->get()->shuffle();
-        // dump($questionsList);
 
-        // avec count() je recupère le nombre de questions par quiz 
-        $nbQuestion = Questions::where('quizzes_id', $id)->count();
-        // dump($nbQuestion);
-        
         // ici, $id est {id} dans la route. Donc je vais récupérer le quizz à l'id correspondant. Si $id = 5 alors j'aurais le quiz 5.
-        $quizzesList = Quizzes::where('id', $id)->first();
-        // dump($quizzesList->tags);
+        $quizzesList = Quizzes::find($id);
+        // dump($quizzesList->questions);
+
+        
+        // Brassons les question du quiz
+        // La liste des questions est un object de la classe Collection
+        // On peux donc lui appliquer la méthod shuffle()
+        /* La méthod shuffle() retourne une nouvelle collection si on veux modifier l'ordre des questions 
+        il faut donc écraser $quizzesList->questions avec la valeur de retour de shuffle() */
+        $quizzesList->questions = $quizzesList->questions->shuffle();
 
 
-        return view('quiz', [
-            'questions' => $questionsList,
-            'nbQuestions' => $nbQuestion,
+        return view('quiz.quiz', [
             'quizzes' => $quizzesList,
         ]);
     }

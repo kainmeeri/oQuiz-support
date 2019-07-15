@@ -29,4 +29,12 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     protected $hidden = [
         'password',
     ];
+
+     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'app_users';
+
 }

@@ -1,5 +1,5 @@
 <?php
-include 'layouts/header.php';
+include __DIR__.'/../layouts/header.php';
 ?>
     <div class="header_pres">
         <h2 class="header_title"> Bienvenue sur O'Quiz </h2>
@@ -12,7 +12,7 @@ include 'layouts/header.php';
     </div>
     <div id="main_div">
         <!-- je boucle avec un foreach pour recuperer les info de mon tableau $quizzes, puis j'appel les informations dont jai besoin -->
-        <?php foreach($quizzes as $quiz) : ?>
+        <?php foreach($tagQuizzes->quizzes as $quiz) : ?>
         <div class="div_flex">        
             <a class="a" href="<?= route('quiz', ['id' => $quiz->id]) ?>">
                 <div class="row">
@@ -28,5 +28,6 @@ include 'layouts/header.php';
     </div>
 
 <?php
-include 'layouts/footer.php';
+include __DIR__.'/../layouts/footer.php';
 ?>
+

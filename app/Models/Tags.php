@@ -24,5 +24,11 @@ class Tags extends Model
      */
     public $timestamps = false;
 
+
+    public function quizzes()
+    {
+        return $this->belongsToMany('App\Models\Quizzes', 'quizzes_has_tags', 'tags_id', 'quizzes_id');
+    }
+
     
 }
