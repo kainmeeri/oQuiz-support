@@ -6,6 +6,11 @@ require_once __DIR__.'/../vendor/autoload.php';
     dirname(__DIR__)
 ))->bootstrap();
 
+
+// Exactement comme pour oFramework, on exécute session_start au début de toutes les pages
+session_start();
+
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -76,8 +81,8 @@ $app->singleton(
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
-$app->register(App\Providers\AuthServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
+// $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
 /*

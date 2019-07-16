@@ -3,10 +3,11 @@ include 'layouts/header.php';
 ?>
 
 <div class="signin">
-    <form action="">
+    <h2 class="form__title">Connexion</h2>
+    <form action="" method="post">
         <div class="field">
             <p class="control has-icons-left has-icons-right">
-                <input class="input" type="email" placeholder="Adresse e-mail">
+                <input class="input" type="email" name="email" placeholder="Adresse e-mail">
                 <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
                 </span>
@@ -17,11 +18,12 @@ include 'layouts/header.php';
         </div>
         <div class="field">
             <p class="control has-icons-left">
-                <input class="input" type="password" placeholder="Mot de passe">
+                <input class="input" type="password" name="password" placeholder="Mot de passe">
                 <span class="icon is-small is-left">
                 <i class="fas fa-lock"></i>
                 </span>
             </p>
+            <a class="signin_add--signup" href="<?= route('signup') ?>">S'enregistrer</a>
         </div>
         <div class="field">
             <p class="control">
@@ -32,6 +34,7 @@ include 'layouts/header.php';
         </div>
     </form>
 </div>
+
 
 <?php
 include 'layouts/footer.php';

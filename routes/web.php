@@ -16,20 +16,38 @@ $router->get('/', [
     'uses' => 'MainController@homeAction'
 ]);
 
-
 $router->get('/signup', [
     'as' => 'signup',
     'uses' => 'UserController@signupAction'
 ]);
 $router->post('/signup', [
     'as' => 'signupPost',
-    'uses' => 'UserController@signupPost'
+    'uses' => 'UserController@signupAction'
 ]);
-
 
 $router->get('/signin', [
     'as' => 'signin',
     'uses' => 'UserController@signinAction'
+]);
+
+$router->post('/signin', [
+    'as' => 'signinPost',
+    'uses' => 'UserController@signinAction'
+]);
+
+$router->get('/account', [
+    'as' => 'account',
+    'uses' => 'UserController@profileAction'
+]);
+
+$router->get('/params', [
+    'as' => 'params',
+    'uses' => 'UserController@paramsAction'
+]);
+
+$router->get('/logout', [
+    'as' => 'logout',
+    'uses' => 'UserController@logoutAction'
 ]);
 
 // /^[0-9]+$/ est une expression régulière qui vérifie si on n'a que des chiffres dans notre chaine de caractères
@@ -50,7 +68,6 @@ $router->get('/tags', [
     'as' => 'tags',
     'uses' => 'TagController@tagsAction'
 ]);
-
 
 $router->get('/tags/{id:[0-9]+}/quiz', [
     'as' => 'tagQuizzes',

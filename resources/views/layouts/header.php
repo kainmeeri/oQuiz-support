@@ -30,8 +30,17 @@
                     <div class="navbar-end">
                         <div class="navbar-item">
                             <div class="buttons">
-                            <a class="button is-primary" href="<?= route('signup') ?>"> <strong>Inscription</strong></a>
-                            <a class="button is-light" href="<?= route('signin') ?>">Connexion</a>
+                             <?php
+                                if ($user != null) {
+                                    ?><a class="button is-primary" href="<?= route('account') ?>"> <strong>Mon compte</strong></a>
+                                    <a class="button is-light" href="<?= route('logout') ?>">Deconnexion</a><?php
+                                } else {
+                                ?> <a class="button is-primary" href="<?= route('signup') ?>"> <strong>Inscription</strong></a>
+                                    <a class="button is-light" href="<?= route('signin') ?>">Connexion</a>
+                                <?php
+                                }
+                            ?>
+                            
                             </div>
                         </div>
                     </div>

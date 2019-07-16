@@ -2,10 +2,17 @@
 include 'layouts/header.php';
 ?>
     <div class="header_pres">
-        <h2 class="header_title"> Bienvenue sur O'Quiz </h2>
-        <p class="header_text">
-            La platform de quiz simple et efficace ! inscris toi vite pour en profiter à 100%.
-        </p>
+        <?php
+            if ($user != null) {
+                ?><h2 class="header_title">Bonjour <?= $user->firstname ?>, un petit quiz ?</h2><?php
+            } else {
+               ?> <h2 class="header_title"> Bienvenue sur O'Quiz </h2>
+                <p class="header_text">
+                 La platform de quiz simple et efficace ! inscris toi vite pour en profiter à 100%.
+                </p>  
+               <?php
+            }
+        ?>
     </div>
     <div class="tags_title--home">
         <p><a href="<?= route('tags') ?>">Thème disponible</a></p>

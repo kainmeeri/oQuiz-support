@@ -69,33 +69,44 @@
     color: white;
 }
 
-
+.form__title {
+    text-align: center;
+    font-size: 1.4em;
+    margin: 0 0 13px;
+}
 .signin {
     width: 350px;
     margin: 200px auto;
     padding: 20px;
     border-radius: 5px;
-    transition: background-color 2s;
+    background-color: lightgray;
+    transition: background-color 0.8s;
 }
 .signin:hover {
-    background-color: lightgray;
+    background-color: rgb(180, 180, 180);
+}
+.signin_add--signup {
+    font-size: 0.8em;
+    margin-left: 73%;
 }
 
 
 .signup {
     width: 350px;
-    margin: 200px auto;
+    margin: 120px auto;
     padding: 20px;
     border-radius: 5px;
-    transition: background-color 2s;
+    background-color: lightgray;
+    transition: background-color 0.8s;
 }
 .signup:hover {
-    background-color: lightgray;
+    background-color: rgb(163, 162, 162);
 }
 
 .control.has-icons-left .input, .control.has-icons-left .select select {
     padding-left: 7px;
 }
+
 
 a {
     color: #4a4a4a;
@@ -177,9 +188,9 @@ a {
 }
 
 .div__tags--title {
-    margin: 150px 0 60px 0;
+    margin: 150px 0 35px 0;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -187,12 +198,16 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 60px;
 }
 
 .div__tags--container {
-    padding: 7px;
-    margin: 5px;
+    width: 200px;
+    padding: 30px 0 30px;
+    margin: 20px;
     border-radius: 4px;
+    text-align: center;
+    font-size: 1.4em;
     color: white;
     transition: font-size 0.5s;
 }
@@ -200,3 +215,64 @@ a {
     font-size: 1.1em;
 }
 
+.danger {
+    color: #8a3d45;
+    background-color: #F8D7DA;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.succes {
+    color: #3c7549;
+    background-color: #D4EDDA;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.account__div {
+    margin: 150px auto;
+    width: 700px;
+    border: 2px solid lightgray;
+    border-radius: 4px; 
+
+}
+
+.account__nav {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.account_title {
+    font-size: 2em;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+.span__user {
+    font-weight: bold;
+    color: #3c7549;
+}
+
+.account__text {
+    margin: 5px 0 15px;
+    font-size: 0.9em;
+    transition: font-size 0.5s;
+    font-weight: 500;
+}
+
+.account__text:hover {
+    font-size: 1em;
+}
+
+.user__information {
+    text-align: center;
+    margin: 5px 0 20px;
+}
+.user__params {
+    
+    text-align: center;
+    margin: 5px 0 20px;
+}

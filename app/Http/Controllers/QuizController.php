@@ -8,6 +8,7 @@ use App\Models\Levels;
 use App\Models\Questions;
 use App\Models\Quizzes;
 use App\Models\Tags;
+use App\Utils\UserSession;
 
 
 
@@ -30,7 +31,9 @@ class QuizController extends Controller
 
     public function quizAction($id)
     {
-
+        if (!UserSession::isConnected()) {
+            return redirect(route('signin'));
+        }
         // ici, $id est {id} dans la route. Donc je vais récupérer le quizz à l'id correspondant. Si $id = 5 alors j'aurais le quiz 5.
         $quizzesList = Quizzes::find($id);
         // dump($quizzesList->questions);

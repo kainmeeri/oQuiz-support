@@ -9,6 +9,7 @@ use App\Models\Questions;
 use App\Models\Quizzes;
 use App\Models\Tags;
 use App\User;
+use App\Utils\UserSession;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -28,7 +29,7 @@ class TagController extends Controller
 
    public function tagsAction(Request $request) {
 
-        $tagsList = Tags::all()->shuffle();
+        $tagsList = Tags::all();
         // dump($tagsList);
 
         return view('tag.tags', [
@@ -37,6 +38,10 @@ class TagController extends Controller
    }
 
     public function tagsQuizAction(Request $request, $id) {
+    
+        if (!UserSession::isConnected()) {
+            return redirect(route('signin'));
+        }
 
         $tagQuizzesList =  Tags::find($id);
         //  dump($tagsQuizList->quizzes);

@@ -2,6 +2,7 @@
 include 'layouts/header.php';
 ?>
 <div class="signup">
+    <h2 class="form__title">Inscription</h2>
     <form action="<?= route('signupPost') ?>" method="post">
         <div class="field">
             <div class="control has-icons-left has-icons-right">
@@ -39,9 +40,17 @@ include 'layouts/header.php';
             </p>
         </div>
         <div class="field">
+            <p class="control has-icons-left">
+                <input class="input" type="password" name="password-confirmation" placeholder="Confirmation du mot de passe">
+                <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+                </span>
+            </p>
+        </div>
+        <div class="field">
             <div class="control">
                 <label class="checkbox">
-                    <input type="checkbox">            
+                    <input type="checkbox" name="validation">            
                     J'accepte les <a href="#"> conditions d'utilisation</a>
                 </label>
             </div>
@@ -54,7 +63,16 @@ include 'layouts/header.php';
             </p>
         </div>
     </form>
+    <div>
+        <?php foreach($messages as $message): ?>
+            <div class="<?= $message['type'] ?>" role="alert">
+                <?= $message['text'] ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
 </div>
+
+
 
 <?php
 include 'layouts/footer.php';
