@@ -32,6 +32,8 @@ class MainController extends Controller
         // shuffle() pour rendre les quiz de la page home aléatoire à chaque refresh
         $quizzesList = Quizzes::all()->shuffle();
         // dump($quizzeList[1]->appUser);
+
+        // abort(404);
         
         return view('home', [
             'quizzes' => $quizzesList

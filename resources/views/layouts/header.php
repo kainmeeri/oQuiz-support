@@ -5,7 +5,7 @@
         <meta charset="utf-8">
 
         <!-- Reset CSS -->
-        <link href="<?= url('css/reset.css') ?>s"  rel="stylesheet">
+        <link href="<?= url('css/reset.css') ?>"  rel="stylesheet">
 
         <!-- Bulma -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
@@ -17,7 +17,7 @@
     </head>
     <body>
         <main >
-            <nav class="navnav navbar has-background-grey" role="navigation" aria-label="main navigation">
+            <nav class="navnav navbar has-background-grey-light" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
                     <a class="nav_title navbar-item is-size-3" href="<?= route('home') ?>">oQuizz</a>
                     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

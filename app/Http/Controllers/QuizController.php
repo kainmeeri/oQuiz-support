@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 // On peut appeler les modêles en utilisant le namespace complet
 // Pour savuer un peu de nos yeux, on peut aussi ajout un use
+use App\Models\Answers;
 use App\Models\Levels;
 use App\Models\Questions;
 use App\Models\Quizzes;
@@ -36,7 +37,7 @@ class QuizController extends Controller
         }
         // ici, $id est {id} dans la route. Donc je vais récupérer le quizz à l'id correspondant. Si $id = 5 alors j'aurais le quiz 5.
         $quizzesList = Quizzes::find($id);
-        // dump($quizzesList->questions);
+        // dump($quizzesList->questions[1]->answers);
 
         
         // Brassons les question du quiz

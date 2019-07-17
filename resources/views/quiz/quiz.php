@@ -58,7 +58,7 @@ include __DIR__.'/../layouts/header.php';
                         <div class="question__choices">
                             <div>
                                 <input type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                                <label for="exampleRadios1">Lorem ipsum</label>   
+                                <label for="exampleRadios1"></label>   
                             </div>
                             <div>
                                 <input type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
@@ -68,7 +68,9 @@ include __DIR__.'/../layouts/header.php';
                                 <input type="radio" name="exampleRadios" id="exampleRadios3" value="option2">
                                 <label for="exampleRadios3"> Lorem ipsum </label> 
                             </div>
+                        
                         </div>
+                        
                     </div>
                     <div class="question__info">      
                         <!-- liens wiki pour chaque questions     -->

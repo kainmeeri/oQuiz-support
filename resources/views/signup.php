@@ -63,13 +63,13 @@ include 'layouts/header.php';
             </p>
         </div>
     </form>
-    <div>
-        <?php foreach($messages as $message): ?>
-            <div class="<?= $message['type'] ?>" role="alert">
-                <?= $message['text'] ?>
-            </div>
-        <?php endforeach; ?>
-    </div>
+</div>
+<div class="error__msg">
+    <?php foreach($messages as $message): ?>
+        <div class="<?= $message['type'] ?>" role="alert">
+            <?= $message['text'] ?>
+        </div>
+    <?php endforeach; ?>
 </div>
 
 

@@ -33,6 +33,7 @@ include 'layouts/header.php';
         </div>
         <?php endforeach; ?>
     </div>
+    
 
 <?php
 include 'layouts/footer.php';

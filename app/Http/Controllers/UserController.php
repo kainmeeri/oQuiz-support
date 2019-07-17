@@ -159,6 +159,8 @@ class UserController extends Controller
         if (!UserSession::isConnected()) {
             return redirect(route('signin'));
         }
+
+        
         return view('users.params');
     }
 
